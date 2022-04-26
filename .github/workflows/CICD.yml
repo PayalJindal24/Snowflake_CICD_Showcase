@@ -1,4 +1,4 @@
-name: snowflake
+name: showcase_cicd
 
 # Controls when the action will run. 
 on:
