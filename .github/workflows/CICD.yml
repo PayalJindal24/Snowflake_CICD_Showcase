@@ -27,7 +27,7 @@ jobs:
 
       - name: Run schemachange
         env:
-          SF_ACCOUNT: "app.snowflake.com/ap-south-1.aws/kg49515/w1IR4W7Ngysm"
+          SF_ACCOUNT: "kg49515.ap-south-1.aws"
           SF_USERNAME: "Ankit"
           SF_ROLE: ${{ secrets.SF_ROLE }}
           SF_WAREHOUSE: ${{ secrets.SF_WAREHOUSE }}
@@ -40,4 +40,4 @@ jobs:
           pip install schemachange
           
           echo "Step 2: Running schemachange"
-          schemachange -f $GITHUB_WORKSPACE/dbscripts -a app.snowflake.com/ap-south-1.aws/kg49515/w1IR4W7Ngysm -u Ankit -r ACCOUNTADMIN -w $SF_WAREHOUSE -d SNOWFLAKE_GITHUB -c SNOWFLAKE_GITHUB.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table
+          schemachange -f $GITHUB_WORKSPACE/dbscripts -a kg49515.ap-south-1.aws -u Ankit -r ACCOUNTADMIN -w $SF_WAREHOUSE -d SNOWFLAKE_GITHUB -c SNOWFLAKE_GITHUB.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table
