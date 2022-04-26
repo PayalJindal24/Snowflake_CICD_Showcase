@@ -39,5 +39,6 @@ jobs:
           echo "Step 1: Installing schemachange"
           pip install schemachange
           
+          
           echo "Step 2: Running schemachange"
           schemachange -f $GITHUB_WORKSPACE/dbscripts -a kg49515.ap-south-1.aws -u Ankit -r ACCOUNTADMIN -w $SF_WAREHOUSE -d SNOWFLAKE_GITHUB -c SNOWFLAKE_GITHUB.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table
