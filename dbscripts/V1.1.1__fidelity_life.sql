@@ -1,4 +1,4 @@
- use database demo_db;
+use database demo_db;
 use schema schemachange;
 Select 'abc';
 create table fidelity_test_users (
