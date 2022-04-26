@@ -8,8 +8,7 @@ on:
   push:
     branches: 
       - main
-  pull_request:
-    branches: 
+    paths: 
       - 'dbscripts/**'
 
   # Allows you to run this workflow manually from the Actions tab
