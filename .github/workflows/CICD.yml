@@ -32,7 +32,7 @@ jobs:
           SF_ROLE: ${{ secrets.SF_ROLE }}
           SF_WAREHOUSE: ${{ secrets.SF_WAREHOUSE }}
           SF_DATABASE: ${{ secrets.SF_DATABASE }}
-          SNOWFLAKE_PASSWORD: ${{ secrets.SF_PASSWORD }}
+          SNOWFLAKE_PASSWORD: "Complere@123"
         run: |
           echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
           python --version
@@ -40,4 +40,4 @@ jobs:
           pip install schemachange
           
           echo "Step 2: Running schemachange"
-          schemachange -f $GITHUB_WORKSPACE/dbscripts -a $SF_ACCOUNT -u $SF_USERNAME -r GITHUB_SNOWFLAKE_CICD -w $SF_WAREHOUSE -d SNOWFLAKE_GITHUB -c SNOWFLAKE_GITHUB.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table
+          schemachange -f $GITHUB_WORKSPACE/dbscripts -a app.snowflake.com/ap-south-1.aws/kg49515/w1IR4W7Ngysm -u Ankit -r GITHUB_SNOWFLAKE_CICD -w $SF_WAREHOUSE -d SNOWFLAKE_GITHUB -c SNOWFLAKE_GITHUB.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table
